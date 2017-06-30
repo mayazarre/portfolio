@@ -7,13 +7,12 @@ lightBlue = (112, 150, 158)
 yellow = (252, 227, 166)
 
 # Import image.
-my_image = Image.open("queen.jpg") #change IMAGENAME to the path on your computer to the image you're using
+my_image = Image.open("corgi.jpg") #change IMAGENAME to the path on your computer to the image you're using
 image_list = my_image.getdata() #each pixel is represented in the form (red value, green value, blue value, transparency). You don't need the fourth value.
 image_list = list(image_list) #Turns the sequence above into a list. The list can be iterated through in a loop.
 
-recolored = [] #list that will hold the pixel data for the new image.
+recolored = [] 
 
-#YOUR CODE to loop through the original list of pixels and build a new list based on intensity should go here.
 for pixels in image_list:
     intensity = pixels[0] + pixels[1] + pixels[2]
     if intensity < 182:
