@@ -1,0 +1,56 @@
+#include <Servo.h>
+
+Servo servoLeft;
+Servo servoRight;
+
+
+void setup()                                 
+{
+  pinMode(7, INPUT);                         
+  pinMode(5, INPUT);                        
+  Serial.begin(9600); 
+
+  servoLeft.attach(13);
+  servoRight.attach(12);
+ 
+                                             // the reason why the numbers are so fast.
+}  
+ 
+void loop()                                  // Main loop auto-repeats
+{                                            
+  byte wLeft = digitalRead(5);               // Copy left result to wLeft  
+  byte wRight = digitalRead(7);              // Copy right result to wRight
+  
+  if (wLeft == 1 or wRight == 1)
+  {
+    servoLeft.writeMicroseconds(1300); //left wheel, robot is going clockwise
+    servoRight.writeMicroseconds(1700); //pause
+    delay(100);
+  }
+
+ if (wLeft == 0 && wLeft == 0)
+ {
+  servoLeft.writeMicroseconds(1700);
+  servoRight.writeMicroseconds(1300);
+  delay(1000);
+  servoLeft.writeMicroseconds(1300);
+  servoRight.writeMicroseconds(1500);
+  delay(600);
+ }
+ 
+ 
+ if (wLeft == 0) 
+ {
+ servoLeft.writeMicroseconds(1700);
+ servoRight.writeMicroseconds(1500); 
+ delay(100);
+ }
+
+ if (wRight == 0)
+ {
+  servoLeft.writeMicroseconds(1500);
+  servoRight.writeMicroseconds(1700);
+  delay(100);
+ }
+}
+
