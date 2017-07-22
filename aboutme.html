@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
   <style>
     body {
@@ -72,6 +74,22 @@ img {
 </head>
 <body>
 
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">About Me</a>
+  <a href="#" class="w3-bar-item w3-button">Projects</a>
+  <a href="#" class="w3-bar-item w3-button">Contact Me</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1>My Page</h1>
+  </div>
+</div>
+
 <h1>Maya Levi</h1>  
 	<div class="topheader"><h2>art. people. writing. food. nature. travel. tech. </h2> </div>
   <p>Hi! I'm Maya and I love to cook, run, read, and make people laugh. I also love learning languages and making art.</p>
@@ -121,7 +139,7 @@ img {
 
 <!-- Scroll Images -->
 <script type="text/javascript" src="js/slideshow.js"></script>
-
+<script type="text/javascript" src="js/sidebar.js"></script>
       
 </body>
 </html>
