@@ -26,8 +26,26 @@ img {
   display:inline;
 
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="https://mayazarre.github.io/portfolio/aboutme.html" class="w3-bar-item w3-button">About Me</a>
+  <a href="https://mayazarre.github.io/portfolio/projects.html" class="w3-bar-item w3-button">Projects</a>
+  <a href="#" class="w3-bar-item w3-button">Contact Me</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+  </div>
+</div>
+
 
 <h1> Here are some of my projects! </h1>
 <h2> Here's a side scroller game made in Scratch. </h2>
@@ -39,6 +57,14 @@ img {
 
   <h2> I learned about circuits and arduinos using <a href="https://mayazarre.github.io/portfolio/circuitscav2.html">this chart</a> </h2>
 
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
 
 </body>
 </html>
